@@ -1,16 +1,20 @@
 class Api::QuestionsController < ApplicationController
 
   def index 
-    respond_with Question.all
+    respond_with Question.all.order('created_at DESC')
   end
 
   def create
     @question = Question.new(question_params)
     
     if @question.save
-      respond_with @question 
+      respond_to do |format|
+        format.json { render :json => @question }
+      end
     else
-      respond_with @question.errors
+      respond_to do |format|
+        format.json { render :json => @question.errors }
+      end
     end
   end
 
