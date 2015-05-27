@@ -6,7 +6,7 @@ angular.module('rangular')
     .controller('QuestionIndexCtrl', ['$scope', '$http', 'Question', function ($scope, $http, Question) {
         // $scope.questions = Question.all();
 
-        $scope.questions = $http.get('http://localhost:3000/api/questions.json')
+        $http.get('http://localhost:3000/api/questions.json')
           .success(function (data) {
             console.log(data);
             $scope.questions = data;
