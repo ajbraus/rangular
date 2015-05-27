@@ -1,1 +1,21 @@
-<h1>Questions</h1>
+<div class='col-sm-6 col-sm-offset-3'>
+  <div ng-show="questions.length == 0">
+    <div class="alert alert-warning">
+      There are no questions yet. Be the first to ask!
+    </div>
+  </div>
+
+  <h5>Questions</h5>
+
+  <form ng-submit="createPost()">
+    <div class="form-group">
+      <textarea ng-model="question.content" class="form-control" placeholder="Ask whatever you like ..." required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Ask</button>
+  </form>
+
+
+  <div ng-repeat="question in questions">
+    {{question.content}}
+  </div>
+</div>
