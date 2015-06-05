@@ -1,6 +1,6 @@
-== Rangular
+# Rangular
 
-=== What's in the box?
+## What's in the box?
 
 1. Rails 4.2.1
 2. Angular 1.4.0
@@ -10,7 +10,7 @@
 6. Byebug
 7. Postgres
 
-=== Getting Started
+## Getting Started
 
 1. ```$ git clone https://github.com/ajbraus/rangular.git my-app```
 2. ```$ cd my-app```
@@ -20,11 +20,11 @@
 5. Navitage to localhost:3000 in browser
 6. Read every file in the project
 
-=== Customize it
+## Customize it
 
 1. Change angular app name (app.js, controllers.js, services.js, index.html)
 
-=== Add a package with bower-rails
+## Add a package with bower-rails
 
 1. add a package to the dependences in bower.json
 2. ```$ rake bower:install PACKAGENAME```
