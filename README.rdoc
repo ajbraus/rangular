@@ -1,2 +1,7 @@
 == Rangular
 
+1. git clone https://github.com/ajbraus/rangular.git my_app
+2. cd my_app
+3. bundle install
+4. rails s
+5. localhost:3000 in browser
