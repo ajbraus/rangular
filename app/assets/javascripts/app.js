@@ -1,8 +1,15 @@
 angular
     .module('rangular', [
         'ngRoute',
-        'templates'
-    ]).config(function ($routeProvider, $locationProvider) {
+        'ngResource',
+        'templates',
+        'rangular.controllers',
+        'rangular.services'
+    ])
+    .config(["$httpProvider", function($httpProvider) {
+        $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
+    }])
+    .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: 'question-index.html',
@@ -13,4 +20,6 @@ angular
             enabled: true,
             requireBase: false
         });
-    });
+
+        $routeProvider.otherwise('/');
+    }]);
