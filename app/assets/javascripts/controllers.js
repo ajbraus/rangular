@@ -6,6 +6,6 @@ angular.module('rangular.controllers', [])
       $scope.createQuestion = function() {
         var question = Question.save($scope.question)
         $scope.question = {};
-        $scope.questions.push(question)
+        $scope.questions.unshift(question)
       }
   }]);
