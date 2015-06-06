@@ -1,4 +1,4 @@
-# Rangular
+# seed-rails-angular
 
 ## What's in the box?
 
@@ -12,7 +12,7 @@
 
 ## Getting Started
 
-1. ```$ git clone https://github.com/ajbraus/rangular.git my-app```
+1. ```$ git clone https://github.com/ajbraus/seed-rails-angular.git my-app```
 2. ```$ cd my-app```
 3. ```$ bundle install```
 4. ```$ rake db:create db:migrate```

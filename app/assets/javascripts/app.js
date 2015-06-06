@@ -1,10 +1,10 @@
 angular
-    .module('rangular', [
+    .module('seed-rails-angular', [
         'ngRoute',
         'ngResource',
         'templates',
-        'rangular.controllers',
-        'rangular.services'
+        'seed-rails-angular.controllers',
+        'seed-rails-angular.services'
     ])
     .config(["$httpProvider", function($httpProvider) {
         $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
