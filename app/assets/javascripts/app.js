@@ -14,12 +14,14 @@ angular
             .when('/', {
                 templateUrl: 'question-index.html',
                 controller: 'QuestionIndexCtrl'
+            })
+            
+            .otherwise({
+              redirectTo: '/'
             });
             
         $locationProvider.html5Mode({
             enabled: true,
             requireBase: false
         });
-
-        $routeProvider.otherwise('/');
     }]);

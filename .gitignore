@@ -16,3 +16,5 @@ db/schema.rb
 /log/*.log
 /tmp
 .DS_Store
+
+npm-debug.log
